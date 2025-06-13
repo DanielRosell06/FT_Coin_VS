@@ -1,0 +1,5 @@
+1. Carteira: Gerencie suas carteiras digitais
+2. Movimentação: Registre compras e vendas
+3. Relatórios: Acesse dados consolidados
+4. Ajuda: Exibe esta tela
+5. Créditos: Informações sobre o projeto

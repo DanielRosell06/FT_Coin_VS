@@ -93,4 +93,7 @@
       <Filter>Arquivos de Cabeçalho</Filter>
     </ClInclude>
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="ajuda.txt" />
+  </ItemGroup>
 </Project>

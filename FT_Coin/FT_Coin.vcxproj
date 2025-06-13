@@ -158,6 +158,9 @@
     <ClInclude Include="Movimentacao.hpp" />
     <ClInclude Include="Oracle.hpp" />
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="ajuda.txt" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

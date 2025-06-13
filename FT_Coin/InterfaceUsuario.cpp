@@ -1,5 +1,6 @@
 #include "InterfaceUsuario.hpp"
 #include <iostream>
+#include <fstream>
 
 InterfaceUsuario::InterfaceUsuario(
     InMemoryCarteiraDAO& cDao,
@@ -27,11 +28,21 @@ void InterfaceUsuario::exibirMenuPrincipal() {
 
 void InterfaceUsuario::exibirAjuda() {
     exibirCabecalho("AJUDA");
-    std::cout << "1. Carteira: Gerencie suas carteiras digitais\n"
-        << "2. Movimentação: Registre compras e vendas\n"
-        << "3. Relatórios: Acesse dados consolidados\n"
-        << "4. Ajuda: Exibe esta tela\n"
-        << "5. Créditos: Informações sobre o projeto\n";
+
+    std::ifstream arquivo("ajuda.txt");  // Abre o arquivo de texto
+
+    if (!arquivo.is_open()) {
+        std::cerr << "Erro ao abrir o arquivo de ajuda!\n";
+        aguardarEnter();
+        return;
+    }
+
+    std::string linha;
+    while (std::getline(arquivo, linha)) {  // Lê cada linha do arquivo
+        std::cout << linha << "\n";         // Imprime a linha
+    }
+
+    arquivo.close();  // Fecha o arquivo
     aguardarEnter();
 }
 
